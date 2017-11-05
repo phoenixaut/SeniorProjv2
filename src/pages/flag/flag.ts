@@ -51,5 +51,6 @@ calculateFruits(){
 calculateMeat(){
   this.NofMeats = Math.round(this.bmr * 0.0075*2)/2;
   this.NofMeats = this.NofMeats - 6;
+  console.log("lnwautja");
 }
 }
