@@ -1,3 +1,4 @@
+import { BmicalPage } from './../bmical/bmical';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CalculatePage } from './../calculate/calculate';
@@ -35,12 +36,16 @@ public getAge($event){
 }
 
 public getWeight($event){
-  // console.log(this.weight);
+  console.log(this.weight);
+  this.calculateBMI();
+  this.calculateBMR();
 }
 
 
 public getHeight($event){
-  // console.log(this.height);
+  console.log(this.height);
+  this.calculateBMI();
+  this.calculateBMR();
 }
 calculateBMI(){
 this.bmi = this.weight/(Math.pow(this.height/100,2));
@@ -52,7 +57,7 @@ calculateBMR(){
 this.bmr = parseFloat(this.bmr).toFixed(2);
 }
 goToCal() {
-  this.navCtrl.push(CalculatePage, {
+  this.navCtrl.push(BmicalPage, {
       ages: this.age,
       weights: this.weight,
       heights: this.height,

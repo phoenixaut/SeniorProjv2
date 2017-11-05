@@ -1,3 +1,4 @@
+import { BmicalPage } from './../pages/bmical/bmical';
 import { RegisterPage } from './../pages/register/register';
 import { FirstPage } from './../pages/first/first';
 import { FlagPage } from './../pages/flag/flag';
@@ -17,6 +18,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {CalculatePage} from '../pages/calculate/calculate'
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDR2OwnJkV_ru8OCVqn2l_rlKN0I-Z63CY",
@@ -41,7 +43,8 @@ export const firebaseConfig = {
     CalculatePage,
     FlagPage,
     FirstPage,
-    RegisterPage
+    RegisterPage,
+    BmicalPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ export const firebaseConfig = {
     CalculatePage,
     FlagPage,
     FirstPage,
-    RegisterPage
+    RegisterPage,
+    BmicalPage
   ],
   providers: [
     StatusBar,
