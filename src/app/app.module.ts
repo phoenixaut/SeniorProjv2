@@ -1,3 +1,4 @@
+import { FlagSettingPage } from './../pages/flag-setting/flag-setting';
 import { BmicalPage } from './../pages/bmical/bmical';
 import { RegisterPage } from './../pages/register/register';
 import { FirstPage } from './../pages/first/first';
@@ -44,7 +45,8 @@ export const firebaseConfig = {
     FlagPage,
     FirstPage,
     RegisterPage,
-    BmicalPage
+    BmicalPage,
+    FlagSettingPage
   ],
   imports: [
     BrowserModule,
@@ -66,7 +68,8 @@ export const firebaseConfig = {
     FlagPage,
     FirstPage,
     RegisterPage,
-    BmicalPage
+    BmicalPage,
+    FlagSettingPage
   ],
   providers: [
     StatusBar,

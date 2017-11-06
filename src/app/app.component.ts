@@ -1,5 +1,3 @@
-import { FlagPage } from './../pages/flag/flag';
-import { RegisterPage } from './../pages/register/register';
 import { FirstPage } from './../pages/first/first';
 import { PlanPage } from './../pages/plan/plan';
 import { MygoalPage } from './../pages/mygoal/mygoal';
@@ -13,9 +11,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import {CalculatePage} from '../pages/calculate/calculate';
-
-
 
 @Component({
   templateUrl: 'app.html'

@@ -23,6 +23,7 @@ public gender;
 public myDate;
 public showPic;
 public BMIPic;
+public fatty = "คุณผอมเกินไป";
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.weights = navParams.get("weights");
     this.heights = navParams.get("heights");
@@ -40,17 +41,90 @@ public BMIPic;
   }
   public showBMI() {
     if(this.bmi < 18.5){
-      this.showPic = "../assets/background/547.png";
+      this.fatty = "คุณผอมเกินไป";
+      switch(this.gender) { 
+        case 1: { 
+           //statements;
+           this.showPic = "../assets/background/78854.png";
+           break; 
+        } 
+        case 2: { 
+           //statements;
+           this.showPic = "../assets/background/84314.png";
+           break; 
+        } 
+     } 
+      
     }else if(this.bmi >= 18.5 && this.bmi <= 24.9){
-      this.showPic = "../assets/background/78854.png";
+      this.fatty = "คุณสมส่วน";
+      switch(this.gender) { 
+        case 1: { 
+           //statements;
+           this.showPic = "../assets/background/547.png";
+           break; 
+        } 
+        case 2: { 
+           //statements;
+           this.showPic = "../assets/background/32156.png";
+           break; 
+        }
+      } 
     }else if(this.bmi >= 25 && this.bmi <= 29.9){
-      this.showPic ="../assets/background/74561.png";
+      this.fatty = "คุณน้ำหนักเกิน";
+      switch(this.gender) { 
+        case 1: { 
+           //statements;
+           this.showPic = "../assets/background/1514.png";
+           break; 
+        } 
+        case 2: { 
+           //statements;
+           this.showPic = "../assets/background/74561.png";
+           break; 
+        }
+      } 
     }else if(this.bmi >= 30 && this.bmi <= 34.9){
-      this.showPic ="../assets/background/15648.png";
+      this.fatty = "คุณอ้วน ระดับ 1";
+      switch(this.gender) { 
+        case 1: { 
+           //statements;
+           this.showPic = "../assets/background/15648.png";
+           break; 
+        } 
+        case 2: { 
+           //statements;
+           this.showPic = "../assets/background/84314.png";
+           break; 
+        }
+      } 
     }else if(this.bmi >= 35 && this.bmi <= 39.9){
-      this.showPic ="../assets/background/6215.png";
+      this.fatty = "คุณอ้วน ระดับ 2";
+      switch(this.gender) { 
+        case 1: { 
+           //statements;
+           this.showPic = "../assets/background/15648.png";
+           break; 
+        } 
+        case 2: { 
+           //statements;
+           this.showPic = "../assets/background/84314.png";
+           break; 
+        }
+      }
     }else if(this.bmi >= 40){
-      this.showPic ="../assets/background/15648.png";
+      this.fatty = "คุณอ้วน ระดับ 3";
+      switch(this.gender) { 
+        case 1: { 
+           //statements;
+           this.showPic = "../assets/background/15648.png";
+           break; 
+        } 
+        case 2: { 
+           //statements;
+           this.showPic = "../assets/background/84314.png";
+           break; 
+        }
+      }
     }
 
   }

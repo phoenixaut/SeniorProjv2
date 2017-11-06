@@ -1,7 +1,7 @@
 import { BmicalPage } from './../bmical/bmical';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { CalculatePage } from './../calculate/calculate';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -66,6 +66,6 @@ goToCal() {
       bmr: this.bmr,
       gender: this.gender,
       birthDate: this.myDate
-    })
+    });
 }
 }
