@@ -28,7 +28,7 @@ export class CalculatePage {
   public dayDefalut;
   public monthDefalut: number[];
   public dayDefalut2: number[] = [];
-  public factorDefalut: number[] = [0.5,0.6,0.7,0.8,0.9,1];
+  public factorDefalut: number[] = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1];
   public factorChange = this.factorDefalut[0];
   public bmi = 0.00;
   public bmr = 0.00;

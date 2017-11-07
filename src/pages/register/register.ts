@@ -60,7 +60,17 @@ buttons: ['OK']
   })
  .then(auth => {
    // Could do something with the Auth-Response
-   this.af.database.list(auth.uid+'/reminder').push({  place: "Bann Sritang",color: "Green", Time: "13.34"});
+   this.af.database.list(auth.uid+'/activities').push({  today:{
+     "morning":{
+       "0":"0"
+     },
+     "noon":{
+       "0":"0"
+     },
+     "dinner":{
+       "0":"0"
+     }
+   }});
    this.af.database.list(auth.uid+'/favorite').push({  place: "Bann Sritang", color: "Green"});
    this.af.database.list(auth.uid+'/feedback').push({ detail: "Nothing", email: ""});
    this.dismiss();

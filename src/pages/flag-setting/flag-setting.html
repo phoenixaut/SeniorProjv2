@@ -15,21 +15,25 @@
 
 <ion-content padding class="getstart">
   <img src="../assets/background/flag.png" alt="" class="img">
-  <p class="position1" (click)="adjust(1)">{{NofRice}} ทัพพี</p><ion-select [(ngModel)]="NofRice" class="position1-1">
-    <ion-option value="1">NES1</ion-option>
+
+  <p class="position1" (click)="adjust(1)">{{NofRice}} ทัพพี</p>
+  <ion-select [(ngModel)]="NofRice" class="position1-1">
+    <ion-option *ngFor="let option of options" [value]="option.val">{{option.name}}</ion-option>
   </ion-select>
   
 
-  <p class="position2">{{NofVegies}} ทัพพี</p><ion-select [(ngModel)]="NofVegies" class="position2-2">
+  <p class="position2">{{NofVegies}} ทัพพี</p>
+  <ion-select [(ngModel)]="NofVegies" class="position2-2">
     <ion-option value="1">NES2</ion-option>
   </ion-select>
 
-  <p class="position3">{{NofFruits}} ส่วน</p><ion-select [(ngModel)]="NofFruits" class="position3-3">
+  <p class="position3">{{NofFruits}} ส่วน</p>
+  <!-- <ion-select [(ngModel)]="NofFruits" class="position3-3">
     <ion-option value="1">NES3</ion-option>
-  </ion-select>
+  </ion-select> -->
 
   <p class="position4">{{NofMeats}} ช้อน</p><ion-select [(ngModel)]="NofMeats" class="position4-4">
-    <ion-option value="1">NES4</ion-option>
+    <ion-option *ngFor="let option2 of options2" [value]="option2.val">{{option2.name}}</ion-option>
   </ion-select>
 
   <p class="position5">1-2 แก้ว</p>

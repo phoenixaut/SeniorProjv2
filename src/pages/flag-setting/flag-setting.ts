@@ -35,6 +35,7 @@ export class FlagSettingPage {
     this.bmr = this.navParams.get("bmr");
     this.tdee = this.navParams.get("tdee");
     this.calculateRice();
+    this.calculateMeat();
   }
 
   ionViewDidLoad() {
@@ -42,14 +43,15 @@ export class FlagSettingPage {
   }
 
   calculateRice(){
-    this.minRice = Math.round(this.bmr * 0.60 * 0.005*2)/2;
+    this.minRice = Math.round(this.bmr * 0.005*2)/2;
     this.maxRice = this.NofRice;
     this.options =  [
       {
-          "name": this.minRice,
-          "val" : this.minRice
+        "name" : this.minRice,
+        "val"  : this.minRice
       }
     ];
+    
     for(this.i = this.minRice + 0.5;  this.i<= this.maxRice; this.i = this.i + 0.5){
       this.options.push({
         "name" : this.i,
@@ -62,12 +64,26 @@ export class FlagSettingPage {
   }
 
   calculateMeat(){
-    this.minMeat = this.bmr * 0.125 * 0.0075;
+    this.minMeat = Math.round(this.bmr * 0.0075*2)/2;
     this.minMeat = this.minMeat - 6;
     this.maxMeat = this.NofMeats;
+    this.options2 =  [
+      {
+          "name": this.minMeat,
+          "val" : this.minMeat
+      }
+    ];
+    for(this.i = this.minMeat + 0.5;  this.i<= this.maxMeat; this.i = this.i + 0.5){
+      this.options2.push({
+        "name" : this.i,
+        "val"  : this.i
+      });
   }
+  console.log(this.options2);
+  
+}
 
-  calculateNewMax(){
-    this.maxRice = this.maxMeat = (this.NofRice * 240) + (this.NofMeats * 60) + 200;
-  }
+  // calculateNewMax(){
+  //   this.maxRice = this.maxMeat = (this.NofRice * 240) + (this.NofMeats * 60) + 200;
+  // }
 }
